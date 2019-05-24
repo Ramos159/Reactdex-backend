@@ -1,3 +1,3 @@
 class Pokedex < ApplicationRecord
-  has_many :pokemon
+  has_many :pokemon, -> {order(id: :asc)}
 end

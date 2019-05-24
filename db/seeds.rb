@@ -135,9 +135,3 @@ pokemon_database_runner(kalos.id,kalos_index,kalos_limit)
 puts"finished kalos region pokedex"
 pokemon_database_runner(special_forms.id,special_forms_index,special_forms_limit)
 puts"finished special forms pokedex"
-
-
-
- region pokedex
-
-binding.pry
