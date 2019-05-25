@@ -2,7 +2,7 @@ class TeamController < ApplicationController
 
   def index
     @teams=Team.all
-    render json: @teams, includes:['pokemons']
+    render json: @teams
   end
 
   def create
