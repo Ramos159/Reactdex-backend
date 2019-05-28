@@ -30,8 +30,9 @@ class TeamController < ApplicationController
       if TeamPokemon.create(team_id:team.id,pokemon_id:pokemon.id)
         render json: @team
       else render json:{errors:"idfk chief"}
+      end
 
-  end
+    end
   end
 
 

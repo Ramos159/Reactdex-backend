@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
       rescue
         nil
       end
-    # end
+    end
 
     def encode_token(user)
       JWT.encode({user_id: user.id}, "hide_this_please")
@@ -18,4 +18,6 @@ class ApplicationController < ActionController::API
     def session_user
       User.find_by(id: decode_token)
     end
+
+
 end
