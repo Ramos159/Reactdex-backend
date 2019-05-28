@@ -6,11 +6,8 @@ class TeamController < ApplicationController
   end
 
   def create
-    team = Team.new(
-      user_id: params[:id],
-      name: params[:name]
-    )
-
+    team = Team.create(user_id: params[:user], name: params[:searchTerm])
+    render json: team
   end
 
   def update
