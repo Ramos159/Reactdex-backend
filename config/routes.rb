@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   post '/create_team', to:'team#create'
   patch '/update_team/:id', to:'team#update'
   patch '/add_pokemon/:id',to:'team#updatepokemon'
-  post '/log_in',to:'auth#login'
-  get '/teams/index',to:'team#index'
+  post '/log_in', to:'auth#login'
+  get '/teams/index', to:'team#index'
+  delete '/delete_team', to: 'team#destroy'
 
   post '/sign_up', to:'user#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

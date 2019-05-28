@@ -19,6 +19,13 @@ class TeamController < ApplicationController
     end
   end
 
+  def destroy
+    team = Team.find(request.headers["TeamID"])
+    team.destroy
+    teams = Team.all
+    render json: teams
+  end
+
 
 
 end
