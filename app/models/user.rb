@@ -1,5 +1,5 @@
 class User < ApplicationRecord
   has_secure_password
-  has_many :teams, limit:5
-  # accepts_nested_attributes_for :teams
+  has_many :teams
+  validates_length_of :teams,maximum:3
 end

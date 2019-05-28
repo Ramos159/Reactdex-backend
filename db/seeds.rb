@@ -136,5 +136,19 @@ puts"finished kanto region pokedex"
 # pokemon_database_runner(special_forms.id,special_forms_index,special_forms_limit)
 # puts"finished special forms pokedex"
  edwin=User.create(username:"edwin",password:'123')
- team=Team.create(user_id:1,name:"first team")
- team_pokemon=TeamPokemon.create(pokemon_id:1,team_id:1)
+
+ team=Team.create(user_id:edwin.id,name:"first team")
+
+ Team.create(user_id:1,name:"second team")
+ Team.create(user_id:1,name:"third team")
+ Team.create(user_id:1,name:"fourth team")
+ # TeamPokemon.create(pokemon_id:1,team_id:1)
+ # Team.create(user_id:1,name:"should not appear")
+ # Team.create(user_id:1,name:"yeet")
+ TeamPokemon.create(pokemon_id:1,team_id:1)
+ TeamPokemon.create(pokemon_id:2,team_id:1)
+ TeamPokemon.create(pokemon_id:3,team_id:1)
+ TeamPokemon.create(pokemon_id:4,team_id:1)
+ TeamPokemon.create(pokemon_id:5,team_id:1)
+ TeamPokemon.create(pokemon_id:6,team_id:1)
+puts"done"
