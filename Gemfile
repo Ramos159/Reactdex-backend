@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.1'
 
 
-
+gem 'jwt'
 gem 'active_model_serializers', '~> 0.10.0'
 gem'rack-cors'
 gem'pry'

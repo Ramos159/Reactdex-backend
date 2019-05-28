@@ -1,4 +1,5 @@
 class AuthController < ApplicationController
+
   def login
     # Find the user by their username
     # Who do you claim to be?
@@ -13,7 +14,7 @@ class AuthController < ApplicationController
       render json: {user: UserSerializer.new(user), token: token}
     else
       # If not, tell them they screwed up
-      render json: {errors: "You dun goofed!"}
+      render json: {errors: "You entered wrong username or password!"}
     end
 
     # render json: user && user.authenticate(params[:password])

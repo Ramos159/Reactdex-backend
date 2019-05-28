@@ -33,7 +33,3 @@ class TeamController < ApplicationController
 
     end
   end
-
-
-
-end

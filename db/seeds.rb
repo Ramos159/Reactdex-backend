@@ -123,19 +123,19 @@ end
 
 pokemon_database_runner(kanto.id,kanto_index,kanto_limit)
 puts"finished kanto region pokedex"
-pokemon_database_runner(johto.id,johto_index,johto_limit)
-puts"finished johto region pokedex"
-pokemon_database_runner(hoenn.id,hoenn_index,hoenn_limit)
-puts"finished hoenn region pokedex"
-pokemon_database_runner(sinnoh.id,sinnoh_index,sinnoh_limit)
-puts"finished sinnoh region pokedex"
+# pokemon_database_runner(johto.id,johto_index,johto_limit)
+# puts"finished johto region pokedex"
+# pokemon_database_runner(hoenn.id,hoenn_index,hoenn_limit)
+# puts"finished hoenn region pokedex"
+# pokemon_database_runner(sinnoh.id,sinnoh_index,sinnoh_limit)
+# puts"finished sinnoh region pokedex"
 # pokemon_database_runner(unova.id,unova_index,unova_limit)
 # puts"finished unova region pokedex"
 # pokemon_database_runner(kalos.id,kalos_index,kalos_limit)
 # puts"finished kalos region pokedex"
 # pokemon_database_runner(special_forms.id,special_forms_index,special_forms_limit)
 # puts"finished special forms pokedex"
- edwin=User.create(username:"edwin",password:'123')
+ edwin=User.create(username:"john",password:'abc')
 
  team=Team.create(user_id:edwin.id,name:"first team")
 
