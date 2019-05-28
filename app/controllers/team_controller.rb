@@ -18,7 +18,6 @@ class TeamController < ApplicationController
       render json: {errors:'no good'}
     end
   end
-  end
 
   def add_pokemon
     team = Team.find(params[:id])
@@ -31,5 +30,12 @@ class TeamController < ApplicationController
       else render json:{errors:"idfk chief"}
       end
 
-    end
+  def destroy
+    team = Team.find(request.headers["TeamID"])
+    team.destroy
+    teams = Team.all
+    render json: teams
+  end
+
+
   end
