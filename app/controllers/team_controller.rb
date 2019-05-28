@@ -7,9 +7,10 @@ class TeamController < ApplicationController
 
   def create
     team = Team.new(
-      user_id:params[:id],
-      name:params[:name]
+      user_id: params[:id],
+      name: params[:name]
     )
+
   end
 
   def update
@@ -18,6 +19,7 @@ class TeamController < ApplicationController
       render json: team
     else
       render json: {errors:'no good'}
+    end
   end
 
 
