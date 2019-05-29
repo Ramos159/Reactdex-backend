@@ -9,9 +9,11 @@ Rails.application.routes.draw do
   post '/login', to:'auth#login'
   get '/teams/index', to:'team#index'
   delete '/delete_team', to: 'team#destroy'
-  post'/auto_login',to:'auth#auto_login'
+  post '/add_pokemon_to_team', to: 'team#add_pokemon'
+  delete '/delete_pokemon_from_team', to: 'team#delete_pokemon_from_team'
+
   post '/sign_up', to:'user#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
+  post'/auto_login',to:'auth#auto_login'
   get'/pokedexs/index',to: 'pokedex#index'
 end
