@@ -6,9 +6,13 @@ class TeamController < ApplicationController
   end
 
   def create
-    team = Team.create(user_id: params[:user], name: params[:searchTerm])
+    user = session_user
+    team = Team.new(user_id: user.id, name: params[:searchTerm])
+    if team.save
     render json: team
+  else render json: {errors:"you are either capped on teams or tried to name two teams the same name!"}
   end
+end
 
   def update
     @team = Team.find(params[:id])
@@ -29,8 +33,11 @@ class TeamController < ApplicationController
         render json: @team
       else render json:{errors:"idfk chief"}
       end
+    end
+  end
 
   def destroy
+    user = session_user
     team = Team.find(request.headers["TeamID"])
     team.destroy
     teams = Team.all

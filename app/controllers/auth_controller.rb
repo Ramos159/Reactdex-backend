@@ -10,7 +10,6 @@ class AuthController < ApplicationController
     if user && user.authenticate(params[:password])
       # If worked, send back the user
       token = encode_token(user)
-
       render json: {user: UserSerializer.new(user), token: token}
     else
       # If not, tell them they screwed up

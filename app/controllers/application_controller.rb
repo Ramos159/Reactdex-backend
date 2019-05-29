@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   def get_auth_header
-      request.body["Authorization"]
+      request.headers["Authorization"]
     end
 
     def decode_token
