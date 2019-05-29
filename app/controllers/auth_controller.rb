@@ -4,11 +4,10 @@ class AuthController < ApplicationController
     # Find the user by their username
     # Who do you claim to be?
     user = User.find_by(username: params[:username])
-
     # Check their submitted password against the password digest
     # Are you really this person?
     if user && user.authenticate(params[:password])
-      # If worked, send back the user
+      # If worked, send back the use
       token = encode_token(user)
       render json: {user: UserSerializer.new(user), token: token}
     else
@@ -19,14 +18,13 @@ class AuthController < ApplicationController
     # render json: user && user.authenticate(params[:password])
   end
 
-  # def auto_login
-  #   user = session_user
-  #
-  #   if user
-  #     render json: user
-  #   else
-  #     render json: {errors: "You dun goofed!"}
-  #   end
+  def auto_login
+    user = session_user
+    if user
+      render json: user
+    else
+      render json: {errors: "Auto Login did not work! please log in manually"}
+    end
 
-  # end
+  end
 end

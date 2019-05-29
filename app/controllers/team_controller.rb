@@ -30,7 +30,7 @@ end
       render json:{errors:"you are capped on pokemon for this team"}
     else
       if TeamPokemon.create(team_id:team.id,pokemon_id:pokemon.id)
-        render json: @team
+        render json: team
       else render json:{errors:"idfk chief"}
       end
     end

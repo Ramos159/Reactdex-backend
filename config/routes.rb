@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post '/login', to:'auth#login'
   get '/teams/index', to:'team#index'
   delete '/delete_team', to: 'team#destroy'
-
+  post'/auto_login',to:'auth#auto_login'
   post '/sign_up', to:'user#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
