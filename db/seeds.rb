@@ -23,9 +23,9 @@ sinnoh_limit=107
 unova_index=496
 unova_limit=153
 kalos_index=649
-kalos_limit=158
+kalos_limit=153
 special_forms_index=807
-special_forms_limit=157
+special_forms_limit=90
 
 kanto = Pokedex.create(name:"Kanto")
 johto = Pokedex.create(name:"Johto")
@@ -129,12 +129,12 @@ pokemon_database_runner(hoenn.id,hoenn_index,hoenn_limit)
 puts"finished hoenn region pokedex"
 pokemon_database_runner(sinnoh.id,sinnoh_index,sinnoh_limit)
 puts"finished sinnoh region pokedex"
-# pokemon_database_runner(unova.id,unova_index,unova_limit)
-# puts"finished unova region pokedex"
-# pokemon_database_runner(kalos.id,kalos_index,kalos_limit)
-# puts"finished kalos region pokedex"
-# pokemon_database_runner(special_forms.id,special_forms_index,special_forms_limit)
-# puts"finished special forms pokedex"
+pokemon_database_runner(unova.id,unova_index,unova_limit)
+puts"finished unova region pokedex"
+pokemon_database_runner(kalos.id,kalos_index,kalos_limit)
+puts"finished kalos region pokedex"
+pokemon_database_runner(special_forms.id,special_forms_index,special_forms_limit)
+puts"finished special forms pokedex"
  edwin=User.create(username:'edwin',password:'edwin')
 
  team=Team.create(user_id:edwin.id,name:"OP PLEASE NERF")
