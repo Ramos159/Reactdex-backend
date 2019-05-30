@@ -5,7 +5,7 @@ class AuthController < ApplicationController
     # Who do you claim to be?
     user = User.find_by(username: params[:username])
     # Check their submitted password against the password digest
-    # Are you really this person
+    Are you really this person
     if user && user.authenticate(params[:password])
       # If worked, send back the use
       token = encode_token(user)
