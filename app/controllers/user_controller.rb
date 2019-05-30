@@ -13,7 +13,7 @@ class UserController < ApplicationController
   def create
     user = User.new(
       username:params[:username],
-      password_digest:params[:password]
+      password:params[:password]
     )
     if user.save
     token = encode_token(user)

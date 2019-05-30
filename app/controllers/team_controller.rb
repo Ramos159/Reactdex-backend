@@ -56,7 +56,7 @@ end
     user = session_user
     team = Team.find(request.headers["TeamID"])
     team.destroy
-    teams = Team.all
+    teams = user.teams
     render json: teams
   end
 
